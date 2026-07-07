@@ -76,7 +76,14 @@ export default function Home() {
     <main>
       <header className="site-header" aria-label="Primary navigation">
         <a className="brand" href="#top" aria-label="Cadryx home">
-          <span className="brand-mark">C</span>
+          <Image
+            src="/cadryx-mark.png"
+            alt=""
+            width={419}
+            height={357}
+            priority
+            className="brand-logo"
+          />
           <span className="brand-name">Cadryx</span>
         </a>
         <nav>
