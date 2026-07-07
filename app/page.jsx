@@ -3,12 +3,12 @@ import ContactForm from "./components/ContactForm";
 
 const services = [
   {
-    title: "Business websites",
-    text: "Clean, responsive websites for independent businesses that need to explain what they do and turn visitors into enquiries.",
+    title: "Small business websites",
+    text: "Clean, responsive sites that explain your offer, build trust quickly, and make it easy for visitors to enquire.",
   },
   {
-    title: "Portfolio and CV sites",
-    text: "Personal websites that present your experience, projects, strengths, and contact details in a confident, easy-to-scan format.",
+    title: "Service pages",
+    text: "Focused pages for specific services, locations, or offers so customers can understand the fit before they get in touch.",
   },
   {
     title: "Refreshes and fixes",
@@ -16,53 +16,58 @@ const services = [
   },
 ];
 
-const skills = [
-  "React",
-  "Next.js",
-  "Responsive design",
-  "HTML & CSS",
-  "Website copy",
-  "SEO basics",
-  "Performance",
-  "Hosting setup",
+const outcomes = [
+  "Clear services",
+  "Stronger enquiries",
+  "Mobile polish",
+  "Fast loading",
+  "Search-ready pages",
+  "Simple navigation",
+  "Trust signals",
+  "Easy handover",
 ];
 
-const timeline = [
+const businessFocus = [
   {
-    role: "Freelance website builder",
-    period: "Now",
+    role: "Clarity first",
+    period: "Positioning",
     detail:
-      "Designing and building practical websites for people who need a sharp online presence without agency overhead.",
+      "Turn what you do, who it helps, and why it matters into a site visitors can understand quickly.",
   },
   {
-    role: "Front-end development focus",
-    period: "Recent work",
+    role: "Built for enquiries",
+    period: "Conversion",
     detail:
-      "Building React interfaces, structured pages, reusable components, and responsive layouts that feel reliable on every screen.",
+      "Shape pages around the questions customers have before they call, email, book, or request a quote.",
   },
   {
-    role: "Business-minded delivery",
-    period: "Ongoing",
+    role: "Ready to run",
+    period: "Launch",
     detail:
-      "Translating goals into clear pages, sensible navigation, useful calls to action, and maintainable content.",
+      "Set up a fast, responsive website with sensible structure, hosting, domain support, and practical handover.",
   },
 ];
 
 const packages = [
   {
     name: "Launch",
-    price: "From £750",
-    detail: "A focused one-page website for a new service, personal brand, or small business.",
+    price: "From £1000",
+    detail: "A focused one-page website for a new business, local service, or single clear offer.",
   },
   {
     name: "Business",
-    price: "From £1,500",
+    price: "From £2000",
     detail: "A multi-page website with stronger structure, service pages, and enquiry paths.",
   },
   {
     name: "Improve",
-    price: "From £350",
+    price: "From £50/hr",
     detail: "Targeted updates to an existing website, scoped around the highest-impact fixes.",
+  },
+  {
+    name: "Manage",
+    price: "From £95/month",
+    detail: "Optional monthly website management for hosting, domain support, updates, checks, small content changes, and practical help after launch.",
   },
 ];
 
@@ -74,9 +79,9 @@ export default function Home() {
           OS
         </a>
         <nav>
-          <a href="#cv">CV</a>
           <a href="#services">Services</a>
-          <a href="#work">Work</a>
+          <a href="#approach">Approach</a>
+          <a href="#packages">Packages</a>
           <a href="#contact">Contact</a>
         </nav>
       </header>
@@ -92,33 +97,34 @@ export default function Home() {
         />
         <div className="hero-scrim" />
         <div className="hero-content">
-          <p className="eyebrow">CV and freelance website builder</p>
-          <h1>Owain Stringer</h1>
+          <p className="eyebrow">Freelance business website builder</p>
+          <h1>Websites for small businesses that need enquiries.</h1>
           <p className="hero-copy">
-            I build clear, responsive websites for freelancers, small businesses,
-            and people who want their experience to feel credible online.
+            I build clear, responsive websites for independent businesses that
+            need to look credible, explain their services, and turn visitors
+            into useful conversations.
           </p>
           <div className="hero-actions" aria-label="Hero actions">
             <a className="button primary" href="#contact">
               Start a project
             </a>
-            <a className="button secondary" href="#cv">
-              View CV
+            <a className="button secondary" href="#services">
+              View services
             </a>
           </div>
         </div>
       </section>
 
-      <section className="intro section-band" aria-label="Profile summary">
+      <section className="intro section-band" aria-label="Business website summary">
         <div className="section-inner intro-grid">
           <div>
-            <p className="eyebrow">Profile</p>
-            <h2>A practical web partner for useful, good-looking sites.</h2>
+            <p className="eyebrow">Business websites</p>
+            <h2>A practical web partner for clear, useful sites.</h2>
           </div>
           <p>
-            This site works as both a personal CV and a business front door. It
-            gives visitors a quick read on skills, services, packages, process,
-            and how to get in touch for a website project.
+            This site is now focused on website projects for businesses. The aim
+            is simple: help customers understand what you offer, trust what they
+            see, and take the next step without friction.
           </p>
         </div>
       </section>
@@ -140,23 +146,23 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section muted" id="cv">
-        <div className="section-inner cv-grid">
+      <section className="section muted" id="approach">
+        <div className="section-inner approach-grid">
           <div>
-            <p className="eyebrow">CV snapshot</p>
-            <h2>Front-end skills with a business-first way of working.</h2>
+            <p className="eyebrow">Approach</p>
+            <h2>Built around the way customers choose a business.</h2>
             <p className="section-copy">
-              Replace this starter copy with your exact roles, employers,
-              qualifications, and project wins when you are ready.
+              A business website should answer real questions, guide people to
+              the right action, and feel polished on every screen.
             </p>
             <div className="skill-list" aria-label="Skills">
-              {skills.map((skill) => (
-                <span key={skill}>{skill}</span>
+              {outcomes.map((outcome) => (
+                <span key={outcome}>{outcome}</span>
               ))}
             </div>
           </div>
-          <div className="timeline" aria-label="Experience timeline">
-            {timeline.map((item) => (
+          <div className="timeline" aria-label="Business website priorities">
+            {businessFocus.map((item) => (
               <article className="timeline-item" key={item.role}>
                 <p>{item.period}</p>
                 <h3>{item.role}</h3>
@@ -167,7 +173,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section" id="work">
+      <section className="section">
         <div className="section-inner split">
           <div>
             <p className="eyebrow">Process</p>
@@ -190,7 +196,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section packages-section">
+      <section className="section packages-section" id="packages">
         <div className="section-inner">
           <div className="section-heading">
             <p className="eyebrow">Packages</p>
@@ -215,10 +221,10 @@ export default function Home() {
             <h2>Tell me what you want the website to do.</h2>
             <p className="section-copy">
               Send a few details and your email app will open with a ready-made
-              enquiry. Update the address in the code to your real inbox.
+              enquiry about the business, pages, goals, and timeline.
             </p>
-            <a className="text-link" href="mailto:hello@yourdomain.com">
-              hello@yourdomain.com
+            <a className="text-link" href="mailto:owainguto@icloud.com">
+              owainguto@icloud.com
             </a>
           </div>
           <ContactForm />

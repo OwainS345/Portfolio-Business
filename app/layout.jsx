@@ -1,9 +1,9 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "Owain Stringer | CV & Freelance Websites",
+  title: "Owain Stringer | Business Websites",
   description:
-    "A personal CV and freelance website-building studio for clear, fast, business-ready websites.",
+    "Freelance business website design and build for clear, fast, enquiry-ready websites.",
 };
 
 export default function RootLayout({ children }) {
