@@ -210,7 +210,7 @@ button {
 }
 
 .intro-grid,
-.cv-grid,
+.approach-grid,
 .contact-grid,
 .split {
   display: grid;
@@ -234,11 +234,16 @@ button {
   margin-bottom: 34px;
 }
 
-.card-grid,
-.package-grid {
+.card-grid {
   display: grid;
   gap: 18px;
   grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.package-grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .card,
@@ -436,6 +441,12 @@ button {
   min-height: 22px;
 }
 
+@media (max-width: 1080px) {
+  .package-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 @media (max-width: 840px) {
   .site-header {
     height: auto;
@@ -459,7 +470,7 @@ button {
   }
 
   .intro-grid,
-  .cv-grid,
+  .approach-grid,
   .contact-grid,
   .split,
   .card-grid,
