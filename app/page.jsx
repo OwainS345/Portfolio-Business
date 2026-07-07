@@ -66,7 +66,7 @@ const packages = [
   },
   {
     name: "Manage",
-    price: "From £95/month",
+    price: "From £100/month",
     detail: "Optional monthly website management for hosting, domain support, updates, checks, small content changes, and practical help after launch.",
   },
 ];
@@ -75,8 +75,9 @@ export default function Home() {
   return (
     <main>
       <header className="site-header" aria-label="Primary navigation">
-        <a className="brand" href="#top" aria-label="Owain Stringer home">
-          OS
+        <a className="brand" href="#top" aria-label="Cadryx home">
+          <span className="brand-mark">C</span>
+          <span className="brand-name">Cadryx</span>
         </a>
         <nav>
           <a href="#services">Services</a>
@@ -97,12 +98,12 @@ export default function Home() {
         />
         <div className="hero-scrim" />
         <div className="hero-content">
-          <p className="eyebrow">Freelance business website builder</p>
-          <h1>Websites for small businesses that need enquiries.</h1>
+          <p className="eyebrow">Business website studio</p>
+          <h1>Cadryx</h1>
           <p className="hero-copy">
-            I build clear, responsive websites for independent businesses that
-            need to look credible, explain their services, and turn visitors
-            into useful conversations.
+            Clear, responsive websites for independent businesses that need to
+            look credible, explain their services, and turn visitors into useful
+            enquiries.
           </p>
           <div className="hero-actions" aria-label="Hero actions">
             <a className="button primary" href="#contact">
@@ -122,9 +123,9 @@ export default function Home() {
             <h2>A practical web partner for clear, useful sites.</h2>
           </div>
           <p>
-            This site is now focused on website projects for businesses. The aim
-            is simple: help customers understand what you offer, trust what they
-            see, and take the next step without friction.
+            Cadryx designs, builds, and manages business websites with a simple
+            aim: help customers understand what you offer, trust what they see,
+            and take the next step without friction.
           </p>
         </div>
       </section>
@@ -132,7 +133,7 @@ export default function Home() {
       <section className="section" id="services">
         <div className="section-inner">
           <div className="section-heading">
-            <p className="eyebrow">Freelance services</p>
+            <p className="eyebrow">Cadryx services</p>
             <h2>Websites that are easy to understand and easy to act on.</h2>
           </div>
           <div className="card-grid">
@@ -218,7 +219,7 @@ export default function Home() {
         <div className="section-inner contact-grid">
           <div>
             <p className="eyebrow">Contact</p>
-            <h2>Tell me what you want the website to do.</h2>
+            <h2>Tell Cadryx what you want the website to do.</h2>
             <p className="section-copy">
               Send a few details and your email app will open with a ready-made
               enquiry about the business, pages, goals, and timeline.
