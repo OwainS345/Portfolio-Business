@@ -46,6 +46,10 @@ const content = {
           title: "Refreshes and fixes",
           text: "Focused improvements to existing websites, from page structure and mobile polish to performance, copy, and conversion flow.",
         },
+        {
+          title: "Welsh website versions",
+          text: "Add a Welsh-language version of your website so customers can switch between English and Cymraeg with clear, consistent content.",
+        },
       ],
     },
     approach: {
@@ -131,6 +135,12 @@ const content = {
           detail:
             "Optional monthly website management for hosting, domain support, updates, checks, small content changes, and practical help after launch.",
         },
+        {
+          name: "Welsh version",
+          price: "From £350",
+          detail:
+            "Add a Welsh-language version to an existing site, including translated page copy, navigation, forms, and a simple language switcher.",
+        },
       ],
     },
     contact: {
@@ -205,6 +215,10 @@ const content = {
         {
           title: "Adnewyddu a thrwsio",
           text: "Gwelliannau penodol i wefannau presennol, o strwythur tudalennau a gorffeniad symudol i berfformiad, copi, a llif trosi.",
+        },
+        {
+          title: "Fersiynau Cymraeg o wefannau",
+          text: "Ychwanegu fersiwn Gymraeg o'ch gwefan fel bod cwsmeriaid yn gallu newid rhwng English a Cymraeg gyda chynnwys clir a chyson.",
         },
       ],
     },
@@ -290,6 +304,12 @@ const content = {
           price: "O £100/mis",
           detail:
             "Rheoli gwefan misol dewisol ar gyfer cynnal, cymorth parth, diweddariadau, gwiriadau, newidiadau cynnwys bach, a chymorth ymarferol ar ol lansio.",
+        },
+        {
+          name: "Fersiwn Gymraeg",
+          price: "O £350",
+          detail:
+            "Ychwanegu fersiwn Gymraeg at safle presennol, gan gynnwys copi tudalennau wedi'i gyfieithu, llywio, ffurflenni, a dewis iaith syml.",
         },
       ],
     },
