@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-export default function ContactForm() {
+export default function ContactForm({ copy }) {
   const [status, setStatus] = useState("");
 
   function handleSubmit(event) {
@@ -14,56 +14,53 @@ export default function ContactForm() {
     const budget = form.get("budget")?.toString();
     const timeline = form.get("timeline")?.toString();
 
-    const subject = encodeURIComponent(`Website project enquiry from ${name}`);
+    const subject = encodeURIComponent(`${copy.emailSubject} ${name}`);
     const body = encodeURIComponent(
-      `Name: ${name}\nEmail: ${email}\nBudget: ${budget}\nTimeline: ${timeline}\n\nProject:\n${project}`
+      `${copy.emailBodyLabels.name}: ${name}\n${copy.emailBodyLabels.email}: ${email}\n${copy.emailBodyLabels.budget}: ${budget}\n${copy.emailBodyLabels.timeline}: ${timeline}\n\n${copy.emailBodyLabels.project}:\n${project}`
     );
 
     window.location.href = `mailto:owainguto@icloud.com?subject=${subject}&body=${body}`;
-    setStatus("Opening your email app with the project details.");
+    setStatus(copy.status);
   }
 
   return (
     <form className="contact-form" onSubmit={handleSubmit}>
       <label>
-        Name
+        {copy.name}
         <input name="name" type="text" autoComplete="name" required />
       </label>
       <label>
-        Email
+        {copy.email}
         <input name="email" type="email" autoComplete="email" required />
       </label>
       <label>
-        Project type
+        {copy.project}
         <textarea
           name="project"
           rows="5"
-          placeholder="A short note about the site, pages, and goals"
+          placeholder={copy.projectPlaceholder}
           required
         />
       </label>
       <div className="form-grid">
         <label>
-          Budget
-          <select name="budget" defaultValue="Not sure yet">
-            <option>Not sure yet</option>
-            <option>Under £1,000</option>
-            <option>£1,000 to £2,500</option>
-            <option>£2,500 to £5,000</option>
-            <option>£5,000+</option>
+          {copy.budget}
+          <select name="budget" defaultValue={copy.budgetOptions[0]}>
+            {copy.budgetOptions.map((option) => (
+              <option key={option}>{option}</option>
+            ))}
           </select>
         </label>
         <label>
-          Timeline
-          <select name="timeline" defaultValue="Flexible">
-            <option>Flexible</option>
-            <option>This month</option>
-            <option>Next 6 weeks</option>
-            <option>Next 3 months</option>
+          {copy.timeline}
+          <select name="timeline" defaultValue={copy.timelineOptions[0]}>
+            {copy.timelineOptions.map((option) => (
+              <option key={option}>{option}</option>
+            ))}
           </select>
         </label>
       </div>
-      <button type="submit">Send enquiry</button>
+      <button type="submit">{copy.submit}</button>
       <p className="form-status" aria-live="polite">
         {status}
       </p>
