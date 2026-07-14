@@ -508,8 +508,8 @@ export default function Home() {
             <p className="eyebrow">{copy.contact.eyebrow}</p>
             <h2>{copy.contact.title}</h2>
             <p className="section-copy">{copy.contact.copy}</p>
-            <a className="text-link" href="mailto:owainguto@icloud.com">
-              owainguto@icloud.com
+            <a className="text-link" href="mailto:OwainCadryx@gmail.com">
+              OwainCadryx@gmail.com
             </a>
           </div>
           <ContactForm copy={copy.form} />
