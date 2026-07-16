@@ -7,6 +7,10 @@ import ContactForm from "./components/ContactForm";
 const content = {
   en: {
     languageLabel: "Language",
+    languageOptions: {
+      english: "English",
+      welsh: "Welsh",
+    },
     navLabel: "Primary navigation",
     homeLabel: "Cadryx home",
     nav: {
@@ -48,7 +52,7 @@ const content = {
         },
         {
           title: "Welsh website versions",
-          text: "Add a Welsh-language version of your website so customers can switch between English and Cymraeg with clear, consistent content.",
+          text: "Add a Welsh-language version of your website so customers can switch between English and Welsh with clear, consistent content.",
         },
       ],
     },
@@ -177,6 +181,10 @@ const content = {
   },
   cy: {
     languageLabel: "Iaith",
+    languageOptions: {
+      english: "Saesneg",
+      welsh: "Cymraeg",
+    },
     navLabel: "Prif lywio",
     homeLabel: "Hafan Cadryx",
     nav: {
@@ -218,7 +226,7 @@ const content = {
         },
         {
           title: "Fersiynau Cymraeg o wefannau",
-          text: "Ychwanegu fersiwn Gymraeg o'ch gwefan fel bod cwsmeriaid yn gallu newid rhwng English a Cymraeg gyda chynnwys clir a chyson.",
+          text: "Ychwanegu fersiwn Gymraeg o'ch gwefan fel bod cwsmeriaid yn gallu newid rhwng Saesneg a Cymraeg gyda chynnwys clir a chyson.",
         },
       ],
     },
@@ -378,14 +386,14 @@ export default function Home() {
               aria-pressed={language === "en"}
               onClick={() => setLanguage("en")}
             >
-              English
+              {copy.languageOptions.english}
             </button>
             <button
               type="button"
               aria-pressed={language === "cy"}
               onClick={() => setLanguage("cy")}
             >
-              Cymraeg
+              {copy.languageOptions.welsh}
             </button>
           </div>
         </div>
